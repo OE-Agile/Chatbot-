@@ -86,16 +86,7 @@ def correct_typos(text):
 
     corrected_text = ' '.join(corrected_words)
     return corrected_text
-def ask_for_feedback():
-    feedback = input("Bot: How would you rate the conversation on a scale of 1 to 5? (1 being poor, 5 being excellent): ")
-    try:
-        rating = int(feedback)
-        if 1 <= rating <= 5:
-            print(f"Bot: Thank you for your feedback! You rated the conversation {rating}/5.")
-        else:
-            print("Bot: Invalid rating. Please provide a rating between 1 and 5.")
-    except ValueError:
-        print("Bot: Invalid input. Please enter a number between 1 and 5.")
+
 
 flag= True
 print("Hello! I am the learning Bot. Start typing your text after greeting to talk to me. For ending convo type bye")
@@ -114,7 +105,7 @@ while(flag == True):
       elif(user_response =='no' or user_response == 'no,thanks'):
         flag = False
         print("Alright")
-        ask_for_feedback()
+       
       else:
         if(greet(user_response) != None):
           print('Bot: ' +greet(user_response))
@@ -128,4 +119,4 @@ while(flag == True):
     else:
       flag = False
       print('Bot: Goodbye!')
-      ask_for_feedback()
+      
