@@ -115,5 +115,5 @@ while(flag == True):
           print('Bot: ', end = '')
           print(response(user_response))
           sentence_tokens.remove(user_response)
-          print("confirmed")
+          
           
